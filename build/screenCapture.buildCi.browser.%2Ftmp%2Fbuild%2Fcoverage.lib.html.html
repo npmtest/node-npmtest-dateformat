@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-dateformat/dateformat/lib/dateformat.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-dateformat/node_modules/dateformat/lib/dateformat.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-dateformat">npmtest-dateformat (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-dateformat/dateformat/lib/dateformat.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-dateformat/node_modules/dateformat/lib/dateformat.js</span></h1>
     <h2>
         
         Statements: <span class="metric">19.74% <small>(15 / 76)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-dateformat/dateformat/lib/</a> &#187; dateformat.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-dateformat/node_modules/dateformat/lib/</a> » dateformat.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -691,49 +689,49 @@
       var timezoneClip = /[^-+\dA-Z]/g;
   
       // Regexes and supporting functions are cached through closure
-      return <span class="fstat-no" title="function not covered" >function (date, mask, utc, gmt) {</span>
+      return <span class="fstat-no" title="function not covered">function (date, mask, utc, gmt) {</span>
   
         // You can't provide utc if you skip other args (use the 'UTC:' mask prefix)
-<span class="cstat-no" title="statement not covered" >        if (arguments.length === 1 &amp;&amp; kindOf(date) === 'string' &amp;&amp; !/\d/.test(date)) {</span>
-<span class="cstat-no" title="statement not covered" >          mask = date;</span>
-<span class="cstat-no" title="statement not covered" >          date = undefined;</span>
+<span class="cstat-no" title="statement not covered">        if (arguments.length === 1 &amp;&amp; kindOf(date) === 'string' &amp;&amp; !/\d/.test(date)) {</span>
+<span class="cstat-no" title="statement not covered">          mask = date;</span>
+<span class="cstat-no" title="statement not covered">          date = undefined;</span>
         }
   
-<span class="cstat-no" title="statement not covered" >        date = date || new Date;</span>
+<span class="cstat-no" title="statement not covered">        date = date || new Date;</span>
   
-<span class="cstat-no" title="statement not covered" >        if(!(date instanceof Date)) {</span>
-<span class="cstat-no" title="statement not covered" >          date = new Date(date);</span>
+<span class="cstat-no" title="statement not covered">        if(!(date instanceof Date)) {</span>
+<span class="cstat-no" title="statement not covered">          date = new Date(date);</span>
         }
   
-<span class="cstat-no" title="statement not covered" >        if (isNaN(date)) {</span>
-<span class="cstat-no" title="statement not covered" >          throw TypeError('Invalid date');</span>
+<span class="cstat-no" title="statement not covered">        if (isNaN(date)) {</span>
+<span class="cstat-no" title="statement not covered">          throw TypeError('Invalid date');</span>
         }
   
-<span class="cstat-no" title="statement not covered" >        mask = String(dateFormat.masks[mask] || mask || dateFormat.masks['default']);</span>
+<span class="cstat-no" title="statement not covered">        mask = String(dateFormat.masks[mask] || mask || dateFormat.masks['default']);</span>
   
         // Allow setting the utc/gmt argument via the mask
-<span class="cstat-no" title="statement not covered" >        var maskSlice = mask.slice(0, 4);</span>
-<span class="cstat-no" title="statement not covered" >        if (maskSlice === 'UTC:' || maskSlice === 'GMT:') {</span>
-<span class="cstat-no" title="statement not covered" >          mask = mask.slice(4);</span>
-<span class="cstat-no" title="statement not covered" >          utc = true;</span>
-<span class="cstat-no" title="statement not covered" >          if (maskSlice === 'GMT:') {</span>
-<span class="cstat-no" title="statement not covered" >            gmt = true;</span>
+<span class="cstat-no" title="statement not covered">        var maskSlice = mask.slice(0, 4);</span>
+<span class="cstat-no" title="statement not covered">        if (maskSlice === 'UTC:' || maskSlice === 'GMT:') {</span>
+<span class="cstat-no" title="statement not covered">          mask = mask.slice(4);</span>
+<span class="cstat-no" title="statement not covered">          utc = true;</span>
+<span class="cstat-no" title="statement not covered">          if (maskSlice === 'GMT:') {</span>
+<span class="cstat-no" title="statement not covered">            gmt = true;</span>
           }
         }
   
-<span class="cstat-no" title="statement not covered" >        var _ = utc ? 'getUTC' : 'get';</span>
-<span class="cstat-no" title="statement not covered" >        var d = date[_ + 'Date']();</span>
-<span class="cstat-no" title="statement not covered" >        var D = date[_ + 'Day']();</span>
-<span class="cstat-no" title="statement not covered" >        var m = date[_ + 'Month']();</span>
-<span class="cstat-no" title="statement not covered" >        var y = date[_ + 'FullYear']();</span>
-<span class="cstat-no" title="statement not covered" >        var H = date[_ + 'Hours']();</span>
-<span class="cstat-no" title="statement not covered" >        var M = date[_ + 'Minutes']();</span>
-<span class="cstat-no" title="statement not covered" >        var s = date[_ + 'Seconds']();</span>
-<span class="cstat-no" title="statement not covered" >        var L = date[_ + 'Milliseconds']();</span>
-<span class="cstat-no" title="statement not covered" >        var o = utc ? 0 : date.getTimezoneOffset();</span>
-<span class="cstat-no" title="statement not covered" >        var W = getWeek(date);</span>
-<span class="cstat-no" title="statement not covered" >        var N = getDayOfWeek(date);</span>
-<span class="cstat-no" title="statement not covered" >        var flags = {</span>
+<span class="cstat-no" title="statement not covered">        var _ = utc ? 'getUTC' : 'get';</span>
+<span class="cstat-no" title="statement not covered">        var d = date[_ + 'Date']();</span>
+<span class="cstat-no" title="statement not covered">        var D = date[_ + 'Day']();</span>
+<span class="cstat-no" title="statement not covered">        var m = date[_ + 'Month']();</span>
+<span class="cstat-no" title="statement not covered">        var y = date[_ + 'FullYear']();</span>
+<span class="cstat-no" title="statement not covered">        var H = date[_ + 'Hours']();</span>
+<span class="cstat-no" title="statement not covered">        var M = date[_ + 'Minutes']();</span>
+<span class="cstat-no" title="statement not covered">        var s = date[_ + 'Seconds']();</span>
+<span class="cstat-no" title="statement not covered">        var L = date[_ + 'Milliseconds']();</span>
+<span class="cstat-no" title="statement not covered">        var o = utc ? 0 : date.getTimezoneOffset();</span>
+<span class="cstat-no" title="statement not covered">        var W = getWeek(date);</span>
+<span class="cstat-no" title="statement not covered">        var N = getDayOfWeek(date);</span>
+<span class="cstat-no" title="statement not covered">        var flags = {</span>
           d:    d,
           dd:   pad(d),
           ddd:  dateFormat.i18n.dayNames[D],
@@ -765,11 +763,11 @@
           N:    N
         };
   
-<span class="cstat-no" title="statement not covered" >        return mask.replace(token, <span class="fstat-no" title="function not covered" >function (match) {</span></span>
-<span class="cstat-no" title="statement not covered" >          if (match in flags) {</span>
-<span class="cstat-no" title="statement not covered" >            return flags[match];</span>
+<span class="cstat-no" title="statement not covered">        return mask.replace(token, <span class="fstat-no" title="function not covered">function (match) {</span></span>
+<span class="cstat-no" title="statement not covered">          if (match in flags) {</span>
+<span class="cstat-no" title="statement not covered">            return flags[match];</span>
           }
-<span class="cstat-no" title="statement not covered" >          return match.slice(1, match.length - 1);</span>
+<span class="cstat-no" title="statement not covered">          return match.slice(1, match.length - 1);</span>
         });
       };
     })();
@@ -802,13 +800,13 @@
     ]
   };
 &nbsp;
-<span class="fstat-no" title="function not covered" >function pad(val, len) {</span>
-<span class="cstat-no" title="statement not covered" >  val = String(val);</span>
-<span class="cstat-no" title="statement not covered" >  len = len || 2;</span>
-<span class="cstat-no" title="statement not covered" >  while (val.length &lt; len) {</span>
-<span class="cstat-no" title="statement not covered" >    val = '0' + val;</span>
+<span class="fstat-no" title="function not covered">function pad(val, len) {</span>
+<span class="cstat-no" title="statement not covered">  val = String(val);</span>
+<span class="cstat-no" title="statement not covered">  len = len || 2;</span>
+<span class="cstat-no" title="statement not covered">  while (val.length &lt; len) {</span>
+<span class="cstat-no" title="statement not covered">    val = '0' + val;</span>
   }
-<span class="cstat-no" title="statement not covered" >  return val;</span>
+<span class="cstat-no" title="statement not covered">  return val;</span>
 }
 &nbsp;
 /**
@@ -819,26 +817,26 @@
  * @param  {Object} `date`
  * @return {Number}
  */
-<span class="fstat-no" title="function not covered" >function getWeek(date) {</span>
+<span class="fstat-no" title="function not covered">function getWeek(date) {</span>
   // Remove time components of date
-<span class="cstat-no" title="statement not covered" >  var targetThursday = new Date(date.getFullYear(), date.getMonth(), date.getDate());</span>
+<span class="cstat-no" title="statement not covered">  var targetThursday = new Date(date.getFullYear(), date.getMonth(), date.getDate());</span>
 &nbsp;
   // Change date to Thursday same week
-<span class="cstat-no" title="statement not covered" >  targetThursday.setDate(targetThursday.getDate() - ((targetThursday.getDay() + 6) % 7) + 3);</span>
+<span class="cstat-no" title="statement not covered">  targetThursday.setDate(targetThursday.getDate() - ((targetThursday.getDay() + 6) % 7) + 3);</span>
 &nbsp;
   // Take January 4th as it is always in week 1 (see ISO 8601)
-<span class="cstat-no" title="statement not covered" >  var firstThursday = new Date(targetThursday.getFullYear(), 0, 4);</span>
+<span class="cstat-no" title="statement not covered">  var firstThursday = new Date(targetThursday.getFullYear(), 0, 4);</span>
 &nbsp;
   // Change date to Thursday same week
-<span class="cstat-no" title="statement not covered" >  firstThursday.setDate(firstThursday.getDate() - ((firstThursday.getDay() + 6) % 7) + 3);</span>
+<span class="cstat-no" title="statement not covered">  firstThursday.setDate(firstThursday.getDate() - ((firstThursday.getDay() + 6) % 7) + 3);</span>
 &nbsp;
   // Check if daylight-saving-time-switch occured and correct for it
-<span class="cstat-no" title="statement not covered" >  var ds = targetThursday.getTimezoneOffset() - firstThursday.getTimezoneOffset();</span>
-<span class="cstat-no" title="statement not covered" >  targetThursday.setHours(targetThursday.getHours() - ds);</span>
+<span class="cstat-no" title="statement not covered">  var ds = targetThursday.getTimezoneOffset() - firstThursday.getTimezoneOffset();</span>
+<span class="cstat-no" title="statement not covered">  targetThursday.setHours(targetThursday.getHours() - ds);</span>
 &nbsp;
   // Number of weeks between target Thursday and first Thursday
-<span class="cstat-no" title="statement not covered" >  var weekDiff = (targetThursday - firstThursday) / (86400000*7);</span>
-<span class="cstat-no" title="statement not covered" >  return 1 + Math.floor(weekDiff);</span>
+<span class="cstat-no" title="statement not covered">  var weekDiff = (targetThursday - firstThursday) / (86400000*7);</span>
+<span class="cstat-no" title="statement not covered">  return 1 + Math.floor(weekDiff);</span>
 }
 &nbsp;
 /**
@@ -848,12 +846,12 @@
  * @param  {Object} `date`
  * @return {Number}
  */
-<span class="fstat-no" title="function not covered" >function getDayOfWeek(date) {</span>
-<span class="cstat-no" title="statement not covered" >  var dow = date.getDay();</span>
-<span class="cstat-no" title="statement not covered" >  if(dow === 0) {</span>
-<span class="cstat-no" title="statement not covered" >    dow = 7;</span>
+<span class="fstat-no" title="function not covered">function getDayOfWeek(date) {</span>
+<span class="cstat-no" title="statement not covered">  var dow = date.getDay();</span>
+<span class="cstat-no" title="statement not covered">  if(dow === 0) {</span>
+<span class="cstat-no" title="statement not covered">    dow = 7;</span>
   }
-<span class="cstat-no" title="statement not covered" >  return dow;</span>
+<span class="cstat-no" title="statement not covered">  return dow;</span>
 }
 &nbsp;
 /**
@@ -861,45 +859,46 @@
  * @param  {*} val
  * @return {String}
  */
-<span class="fstat-no" title="function not covered" >function kindOf(val) {</span>
-<span class="cstat-no" title="statement not covered" >  if (val === null) {</span>
-<span class="cstat-no" title="statement not covered" >    return 'null';</span>
+<span class="fstat-no" title="function not covered">function kindOf(val) {</span>
+<span class="cstat-no" title="statement not covered">  if (val === null) {</span>
+<span class="cstat-no" title="statement not covered">    return 'null';</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (val === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >    return 'undefined';</span>
+<span class="cstat-no" title="statement not covered">  if (val === undefined) {</span>
+<span class="cstat-no" title="statement not covered">    return 'undefined';</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (typeof val !== 'object') {</span>
-<span class="cstat-no" title="statement not covered" >    return typeof val;</span>
+<span class="cstat-no" title="statement not covered">  if (typeof val !== 'object') {</span>
+<span class="cstat-no" title="statement not covered">    return typeof val;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (Array.isArray(val)) {</span>
-<span class="cstat-no" title="statement not covered" >    return 'array';</span>
+<span class="cstat-no" title="statement not covered">  if (Array.isArray(val)) {</span>
+<span class="cstat-no" title="statement not covered">    return 'array';</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return {}.toString.call(val)</span>
+<span class="cstat-no" title="statement not covered">  return {}.toString.call(val)</span>
     .slice(8, -1).toLowerCase();
 };
 &nbsp;
 &nbsp;
 &nbsp;
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof define === 'function' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >define.amd)</span> {
-<span class="cstat-no" title="statement not covered" >    define(<span class="fstat-no" title="function not covered" >function () {</span></span>
-<span class="cstat-no" title="statement not covered" >      return dateFormat;</span>
+  <span class="missing-if-branch" title="if path not taken">I</span>if (typeof define === 'function' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered">define.amd)</span> {
+<span class="cstat-no" title="statement not covered">    define(<span class="fstat-no" title="function not covered">function () {</span></span>
+<span class="cstat-no" title="statement not covered">      return dateFormat;</span>
     });
-  } else <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof exports === 'object') {
+  } else <span class="missing-if-branch" title="else path not taken">E</span>if (typeof exports === 'object') {
     module.exports = dateFormat;
   } else {
-<span class="cstat-no" title="statement not covered" >    global.dateFormat = dateFormat;</span>
+<span class="cstat-no" title="statement not covered">    global.dateFormat = dateFormat;</span>
   }
 })(this);
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 09:06:38 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 15:37:41 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
