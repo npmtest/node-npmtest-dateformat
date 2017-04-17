@@ -1,7 +1,7 @@
 # test coverage for  [dateformat (v2.0.0)](https://github.com/felixge/node-dateformat)  [![npm package](https://img.shields.io/npm/v/npmtest-dateformat.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-dateformat) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-dateformat.svg)](https://travis-ci.org/npmtest/node-npmtest-dateformat)
 #### A node.js package for Steven Levithan's excellent dateFormat() function.
 
-[![NPM](https://nodei.co/npm/dateformat.png?downloads=true)](https://www.npmjs.com/package/dateformat)
+[![NPM](https://nodei.co/npm/dateformat.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/dateformat)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-dateformat/tree/alpha)|
 |--:|:--|
@@ -9,11 +9,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-dateformat/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-dateformat/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-dateformat/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-dateformat/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-dateformat/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-dateformat/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-dateformat/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-dateformat/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-dateformat/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-dateformat%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-dateformat/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-dateformat/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-dateformat/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-dateformat/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-dateformat%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-dateformat/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-dateformat/build/test-report.html](https://npmtest.github.io/node-npmtest-dateformat/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-dateformat/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-dateformat/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-dateformat/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-dateformat/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-dateformat/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-dateformat/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-dateformat/build/screenCapture.npmPackageListing.svg)
 
@@ -37,12 +43,10 @@
             "name": "Steven Levithan"
         },
         {
-            "name": "Felix Geisendörfer",
-            "email": "felix@debuggable.com"
+            "name": "Felix Geisendörfer"
         },
         {
-            "name": "Christoph Tavan",
-            "email": "dev@tavan.de"
+            "name": "Christoph Tavan"
         },
         {
             "name": "Jon Schlinkert",
@@ -69,21 +73,17 @@
     "main": "lib/dateformat",
     "maintainers": [
         {
-            "name": "ctavan",
-            "email": "dev@tavan.de"
+            "name": "ctavan"
         },
         {
-            "name": "felixge",
-            "email": "felix@debuggable.com"
+            "name": "felixge"
         },
         {
-            "name": "jonschlinkert",
-            "email": "github@sellside.com"
+            "name": "jonschlinkert"
         }
     ],
     "name": "dateformat",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/felixge/node-dateformat.git"
