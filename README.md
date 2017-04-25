@@ -1,4 +1,7 @@
-# test coverage for  [dateformat (v2.0.0)](https://github.com/felixge/node-dateformat)  [![npm package](https://img.shields.io/npm/v/npmtest-dateformat.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-dateformat) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-dateformat.svg)](https://travis-ci.org/npmtest/node-npmtest-dateformat)
+# npmtest-dateformat
+
+#### basic test coverage for  [dateformat (v2.0.0)](https://github.com/felixge/node-dateformat)  [![npm package](https://img.shields.io/npm/v/npmtest-dateformat.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-dateformat) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-dateformat.svg)](https://travis-ci.org/npmtest/node-npmtest-dateformat)
+
 #### A node.js package for Steven Levithan's excellent dateFormat() function.
 
 [![NPM](https://nodei.co/npm/dateformat.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/dateformat)
@@ -7,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-dateformat/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-dateformat/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-dateformat/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-dateformat/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-dateformat/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-dateformat/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-dateformat/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-dateformat/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-dateformat/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-dateformat/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-dateformat/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-dateformat/build/coverage.html/index.html)
 
@@ -91,7 +94,8 @@
     "scripts": {
         "test": "mocha"
     },
-    "version": "2.0.0"
+    "version": "2.0.0",
+    "bin": {}
 }
 ```
 
